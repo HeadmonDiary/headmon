@@ -9,6 +9,7 @@
   <link rel="icon" href="/assets/headmon-icon.png">
   <link rel="apple-touch-icon" href="/assets/headmon-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/screenshot-appearance.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -34,6 +35,12 @@
         iOS apps share the same diary meaning while feeling at home on each platform.
       </p>
       <p class="demo-note">All diary information shown here is fictional demonstration data.</p>
+      <div class="screenshot-appearance" role="group" aria-label="Screenshot appearance">
+        <span>Screenshot appearance</span>
+        <button type="button" data-screenshot-theme="dark" aria-pressed="true">Dark</button>
+        <button type="button" data-screenshot-theme="light" aria-pressed="false">Light</button>
+      </div>
+      <p class="screenshot-hint">Dark by default. Choose Light or tap any screenshot to switch.</p>
     </header>
 
     <section class="workflow" aria-labelledby="workflow-today">
@@ -48,7 +55,7 @@
       </div>
       <figure class="screen-figure">
         <div class="phone-shell">
-          <img src="/assets/screens/ios-today.png" width="660" height="1434" alt="Headmon Today screen on iOS with quick day actions, episode logging and a week calendar">
+          <img class="theme-screenshot" src="/assets/screens/ios-today-dark.png" data-dark-src="/assets/screens/ios-today-dark.png" data-light-src="/assets/screens/ios-today-light.png" width="660" height="1434" alt="Headmon Today screen on iOS with quick day actions, episode logging and a week calendar">
         </div>
         <figcaption>The native iOS Today view.</figcaption>
       </figure>
@@ -66,7 +73,7 @@
       </div>
       <figure class="screen-figure">
         <div class="phone-shell phone-shell-android">
-          <img src="/assets/screens/android-today.png" loading="lazy" width="648" height="1440" alt="Headmon main diary screen on Android">
+          <img class="theme-screenshot" src="/assets/screens/android-today-dark.png" data-dark-src="/assets/screens/android-today-dark.png" data-light-src="/assets/screens/android-today-light.png" loading="lazy" width="1080" height="2400" alt="Headmon main diary screen on Android">
         </div>
         <figcaption>The native Android diary view.</figcaption>
       </figure>
@@ -84,7 +91,7 @@
       </div>
       <figure class="screen-figure">
         <div class="phone-shell phone-shell-android">
-          <img src="/assets/screens/android-log.png" loading="lazy" width="648" height="1440" alt="Headmon episode logging screen on Android with fictional information">
+          <img class="theme-screenshot" src="/assets/screens/android-log-dark.png" data-dark-src="/assets/screens/android-log-dark.png" data-light-src="/assets/screens/android-log-light.png" loading="lazy" width="1080" height="2400" alt="Headmon episode logging screen on Android with fictional information">
         </div>
         <figcaption>Episode logging on Android.</figcaption>
       </figure>
@@ -102,7 +109,7 @@
       </div>
       <figure class="screen-figure">
         <div class="phone-shell">
-          <img src="/assets/screens/ios-medicines.png" loading="lazy" width="660" height="1434" alt="Headmon medicine catalog on iOS with built-in medicine symbols">
+          <img class="theme-screenshot" src="/assets/screens/ios-medicines-dark.png" data-dark-src="/assets/screens/ios-medicines-dark.png" data-light-src="/assets/screens/ios-medicines-light.png" loading="lazy" width="660" height="1434" alt="Headmon medicine catalog on iOS with built-in medicine symbols">
         </div>
         <figcaption>The medicine catalog on iOS.</figcaption>
       </figure>
@@ -120,7 +127,7 @@
       </div>
       <figure class="screen-figure">
         <div class="phone-shell">
-          <img src="/assets/screens/ios-insights.png" loading="lazy" width="660" height="1434" alt="Headmon Insights screen on iOS showing fictional streak and pattern summaries">
+          <img class="theme-screenshot" src="/assets/screens/ios-insights-dark.png" data-dark-src="/assets/screens/ios-insights-dark.png" data-light-src="/assets/screens/ios-insights-light.png" loading="lazy" width="660" height="1434" alt="Headmon Insights screen on iOS showing fictional streak and pattern summaries">
         </div>
         <figcaption>On-device Insights with fictional data.</figcaption>
       </figure>
