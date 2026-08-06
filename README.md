@@ -10,6 +10,8 @@ repository.
 ## Support
 
 - Website: https://headmondiary.com/
+- In action: https://headmondiary.com/in-action/
+- About: https://headmondiary.com/about/
 - Support: https://headmondiary.com/support/
 - Privacy policy: https://headmondiary.com/privacy/
 - Private contact: headmon@proton.me
