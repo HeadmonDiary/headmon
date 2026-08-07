@@ -1,6 +1,5 @@
 (() => {
   const screenshots = [...document.querySelectorAll(".theme-screenshot")];
-  const controls = [...document.querySelectorAll("[data-screenshot-theme]")];
 
   if (screenshots.length === 0) return;
 
@@ -31,25 +30,12 @@
       );
     });
 
-    controls.forEach((control) => {
-      control.setAttribute(
-        "aria-pressed",
-        String(control.dataset.screenshotTheme === appearance)
-      );
-    });
-
     try {
       window.localStorage.setItem("headmon-screenshot-appearance", appearance);
     } catch (_) {
       // The screenshots still switch when browser storage is unavailable.
     }
   };
-
-  controls.forEach((control) => {
-    control.addEventListener("click", () => {
-      applyAppearance(control.dataset.screenshotTheme);
-    });
-  });
 
   screenshots.forEach((screenshot) => {
     const toggle = () => {
