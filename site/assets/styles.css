@@ -152,54 +152,6 @@ main {
   font-size: 0.92rem;
 }
 
-.screenshot-appearance {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: 0.75rem;
-  padding: 0.28rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(18, 76, 66, 0.08);
-}
-
-.screenshot-appearance span {
-  padding-inline: 0.65rem 0.45rem;
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 680;
-}
-
-.screenshot-appearance button {
-  min-height: 2.25rem;
-  padding: 0.3rem 0.8rem;
-  border: 0;
-  border-radius: 999px;
-  color: var(--muted);
-  background: transparent;
-  font: inherit;
-  font-size: 0.88rem;
-  font-weight: 740;
-  cursor: pointer;
-}
-
-.screenshot-appearance button[aria-pressed="true"] {
-  color: #fff;
-  background: #147d70;
-}
-
-.screenshot-appearance button:focus-visible {
-  outline: 0.18rem solid var(--blue);
-  outline-offset: 0.12rem;
-}
-
-.screenshot-hint {
-  margin: 0.5rem 0 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
 .theme-screenshot {
   cursor: pointer;
   transition: opacity 140ms ease, transform 140ms ease;
