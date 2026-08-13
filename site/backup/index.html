@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Headmon backup files work, what they contain, and how to move a diary between Android and iOS.">
+  <meta name="theme-color" content="#147d70">
+  <title>Backup and transfer | Headmon</title>
+  <link rel="icon" href="/assets/headmon-icon.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img src="/assets/headmon-icon.png" alt="">
+      <span>Headmon</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/in-action/">In action</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/backup/" aria-current="page">Backups</a>
+      <a href="/support/">Support</a>
+      <a href="https://github.com/HeadmonDiary/headmon">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-title">
+      <p class="eyebrow">Your copy, your choice</p>
+      <h1>Protect or move your Headmon diary.</h1>
+      <p>A backup file gives you a portable copy without creating a Headmon account or sending the diary to a Headmon server.</p>
+    </header>
+
+    <article class="document">
+      <p class="notice">
+        <strong>Keep backup files private:</strong> they are readable files that can contain
+        sensitive health information. Store them somewhere you trust and never attach one to a
+        public GitHub issue.
+      </p>
+
+      <h2>Complete backup</h2>
+      <p>A complete Headmon backup is a ZIP file that can include:</p>
+      <ul>
+        <li>Diary dates and whether a day was pain-free or intentionally skipped</li>
+        <li>Headache, migraine and aura-only episodes with times, intensity, symptoms and notes</li>
+        <li>Day notes, stress levels, triggers, medicines and doses</li>
+        <li>Weather and location context saved on diary days</li>
+        <li>The separate continuous local weather history</li>
+        <li>Day and episode photos with their captions</li>
+        <li>Custom trigger and medicine definitions needed to preserve your diary</li>
+      </ul>
+
+      <h2>Calendar backup</h2>
+      <p>
+        The smaller calendar backup is a JSON file for diary migration and automatic rolling
+        backups. It contains the diary details listed above, except photo files, photo captions and
+        the separate continuous weather history.
+      </p>
+
+      <h2>What neither backup contains</h2>
+      <ul>
+        <li>Notification schedules, app permissions, appearance, icon or other device settings</li>
+        <li>A Headmon account, email address, advertising ID, device ID or serial number</li>
+      </ul>
+      <p>
+        Free-text notes and saved locations can still identify someone even though Headmon does not
+        add account or device identifiers.
+      </p>
+
+      <h2>Automatic backup on iPhone and iPad</h2>
+      <p>
+        Automatic backup is optional. When enabled, Headmon creates a calendar backup every seven
+        days and keeps the three newest files. You choose one of two destinations:
+      </p>
+      <ul>
+        <li><strong>Local only:</strong> files remain inside Headmon, are excluded from automatic device backup and are deleted if the app is deleted.</li>
+        <li><strong>A Files folder:</strong> Headmon writes to the folder you select. Its provider controls storage and any syncing. The Headmon developer cannot browse or receive those files.</li>
+      </ul>
+      <p>
+        iOS decides when background work runs. If a backup is due but iOS has not run it in the
+        background, Headmon catches up the next time the app opens.
+      </p>
+
+      <h2>Manual backup and restore</h2>
+      <ol>
+        <li>Open <strong>Settings → Data &amp; privacy</strong>.</li>
+        <li>Export a complete backup and save it in a private location.</li>
+        <li>On the destination device, choose <strong>Import Headmon backup</strong>.</li>
+        <li>If a date already exists, review the conflict and choose whether to keep the current day or replace it with the backup.</li>
+        <li>Review the import summary for diary days, photos and weather history.</li>
+      </ol>
+
+      <h2>Move between Android and iOS</h2>
+      <p>
+        Android and iOS use the same complete backup and calendar backup formats. Export a complete
+        backup from the old device, move
+        the file using a method you trust, then import it on the new device. Headmon also accepts
+        older Android backup files that have been carried forward from earlier app versions.
+      </p>
+
+      <h2>Why there are ZIP and JSON files</h2>
+      <p>
+        A complete backup ends in <strong>.zip</strong> because it bundles photos with structured
+        diary and weather data. A calendar backup ends in <strong>.json</strong> because it is a
+        smaller readable diary file. You do not need to open or understand either format to use
+        backup and restore.
+      </p>
+
+      <h2>Before deleting or reinstalling Headmon</h2>
+      <p>
+        Confirm that a recent backup exists outside the app and that you can find it. Local-only
+        automatic backups disappear with Headmon. The developer has no server copy and cannot
+        recover a deleted diary.
+      </p>
+
+      <h2>Related information</h2>
+      <ul>
+        <li><a href="/privacy/">Privacy policy</a></li>
+        <li><a href="/support/">Support and safe problem reporting</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Headmon</span>
+    <a href="/privacy/">Privacy</a>
+  </footer>
+</body>
+</html>

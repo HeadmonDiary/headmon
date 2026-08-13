@@ -19,6 +19,7 @@
       <a href="/in-action/">In action</a>
       <a href="/about/">About</a>
       <a href="/privacy/">Privacy</a>
+      <a href="/backup/">Backups</a>
       <a href="/support/" aria-current="page">Support</a>
       <a href="https://github.com/HeadmonDiary/headmon">GitHub</a>
     </nav>
@@ -40,7 +41,7 @@
       </p>
 
       <p class="notice">
-        <strong>Protect your diary:</strong> never attach a Headmon JSON, CSV or PDF export,
+        <strong>Protect your diary:</strong> never attach a Headmon backup, CSV or PDF export,
         medical document, private photo, exact location or other health information to a public
         GitHub issue. Describe the behavior using invented example data instead.
       </p>
@@ -49,7 +50,7 @@
       <ol>
         <li>Check the Headmon version and build under Settings → About Headmon.</li>
         <li>Restart Headmon and, if appropriate, restart the device.</li>
-        <li>Create a private JSON backup before reinstalling, resetting data or testing an import.</li>
+        <li>Create a complete backup in a private Files location before reinstalling, resetting data or testing an import.</li>
         <li>Note the device model, operating-system version and the exact steps that caused the problem.</li>
         <li>Remove or replace all real diary details before sharing a screenshot.</li>
       </ol>
@@ -57,9 +58,15 @@
       <h2>Data recovery and migration</h2>
       <p>
         Headmon has no server copy of your diary and the developer cannot recover deleted local
-        data. Use the app’s JSON export or optional automatic backup to keep a portable copy. JSON
-        is also the supported way to move diary data between Android and iOS. Keep backups private:
-        they can contain sensitive health information.
+        data. Optional automatic backup can keep three rolling copies inside Headmon or in a Files
+        folder you explicitly select. Local-only backups are deleted with the app, so create a
+        complete backup in Files before uninstalling, resetting the diary or changing phones.
+        The same complete ZIP format moves diary data, photos and weather history between Android and iOS.
+      </p>
+      <p>
+        Keep every export private. Backup, CSV and PDF files can contain sensitive health information,
+        exact dates and times, free-text notes, coordinates and place names. Headmon cannot recover
+        or delete a copy stored with iCloud Drive or another Files provider.
       </p>
 
       <h2>Medical notice</h2>
@@ -71,6 +78,7 @@
 
       <h2>Useful links</h2>
       <ul>
+        <li><a href="/backup/">Backup, restore and phone-transfer guide</a></li>
         <li><a href="/privacy/">Headmon privacy policy</a></li>
         <li><a href="https://github.com/HeadmonDiary/headmon">Headmon on GitHub</a></li>
         <li><a href="https://github.com/HeadmonDiary/headmon/issues">Open issues</a></li>

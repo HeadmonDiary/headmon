@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Headmon privacy policy: local-only diary storage, optional weather requests, and user-controlled exports.">
+  <meta name="description" content="Headmon privacy policy: on-device diary storage, optional weather requests, and user-controlled exports and backups.">
   <meta name="theme-color" content="#147d70">
   <title>Privacy policy | Headmon</title>
   <link rel="icon" href="/assets/headmon-icon.png">
@@ -19,6 +19,7 @@
       <a href="/in-action/">In action</a>
       <a href="/about/">About</a>
       <a href="/privacy/" aria-current="page">Privacy</a>
+      <a href="/backup/">Backups</a>
       <a href="/support/">Support</a>
       <a href="https://github.com/HeadmonDiary/headmon">GitHub</a>
     </nav>
@@ -28,7 +29,7 @@
     <header class="page-title">
       <p class="eyebrow">Plain-language policy</p>
       <h1>Privacy at Headmon</h1>
-      <p>Effective 5 August 2026. Headmon is designed around a simple boundary: your headache diary belongs on your device.</p>
+      <p>Effective 13 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
     </header>
 
     <article class="document">
@@ -58,15 +59,40 @@
 
       <h2>Exports, imports and backups</h2>
       <p>
-        JSON, CSV and PDF files are created only when you request them. Automatic JSON backup is
-        optional and writes to a folder you select through the system Files interface. The folder
-        may be on the device or managed by a file provider such as iCloud Drive, depending on your
-        choice and system settings. Headmon does not operate or receive data from that storage.
+        Complete ZIP backups, manual calendar JSON backups, CSV and PDF files are created only when you
+        request them. Recurring calendar backup is optional and starts only after you enable it. On iOS, you choose whether Headmon keeps the three newest backup files in
+        its local-only storage or writes them to a folder you explicitly select through the system
+        Files interface. The selected folder may be on the device or managed by a provider such as
+        iCloud Drive, depending on your choice and system settings. Headmon stores the system-granted
+        folder permission on your device so it can create later backups, but the developer cannot
+        browse or receive files from that folder.
       </p>
       <p>
-        Exported files can contain sensitive health information. Photos are not included in the
-        portable JSON archive, but remain private files inside Headmon unless you explicitly share
-        or copy them. Deleting Headmon does not delete export or backup copies stored elsewhere.
+        The <a href="/backup/">Headmon backup guide</a> explains what complete and calendar backups contain,
+        what it omits, how storage locations differ and how to move a diary between devices.
+      </p>
+      <p>
+        Local-only automatic backups remain inside Headmon, use operating-system controls that
+        exclude them from device backup, and are deleted when the app is deleted. A selected Files
+        provider controls its own storage, security, syncing and retention. Copies written outside
+        Headmon can remain after the app is deleted.
+      </p>
+      <p>
+        Exported files can contain sensitive health information in readable form, including dates,
+        episode times, symptoms, pain levels, medicines, triggers, notes, weather, coordinates and
+        place names. Headmon exports do not add a user account, name, email address, advertising ID,
+        device ID, serial number or hardware identifier. Free-text notes and location history can
+        nevertheless identify a person. Complete ZIP backups include photos and captions. Calendar
+        JSON backups do not include photo files or continuous weather history.
+      </p>
+
+      <h2>Your choices and deletion</h2>
+      <p>
+        You can turn off automatic backup, change its destination, disable weather and location
+        features, revoke location access in system Settings, delete individual diary days, or reset
+        all Headmon data. Files previously exported or written to a selected Files folder must be
+        deleted using that provider. Headmon has no server copy and cannot recover or delete those
+        external copies for you.
       </p>
 
       <h2>Optional location and weather</h2>
@@ -121,7 +147,7 @@
       </p>
       <p>
         Email sent to <a href="mailto:headmon@proton.me">headmon@proton.me</a> is handled through
-        Proton. GitHub Issues are public. Never post a Headmon JSON, CSV or PDF export, private
+        Proton. GitHub Issues are public. Never post a Headmon backup, CSV or PDF export, private
         photo, medical record, address or other sensitive information in a public issue.
       </p>
 
