@@ -53,8 +53,8 @@
 
       <h2>Calendar backup</h2>
       <p>
-        The smaller calendar backup is a JSON file for diary migration and automatic rolling
-        backups. It contains the diary details listed above, except photo files, photo captions and
+        The smaller calendar backup is a JSON file for diary migration and manual export. It
+        contains the diary details listed above, except photo files, photo captions and
         the separate continuous weather history.
       </p>
 
@@ -68,14 +68,15 @@
         add account or device identifiers.
       </p>
 
-      <h2>Automatic backup on iPhone and iPad</h2>
+      <h2>Automatic backup</h2>
       <p>
-        Automatic backup is optional. When enabled, Headmon creates a calendar backup every seven
-        days and keeps the three newest files. You choose one of two destinations:
+        Automatic backup is optional. When enabled, Headmon creates a complete ZIP backup every
+        seven days and keeps the two newest files. Each file includes diary data, photos, captions
+        and continuous weather history.
       </p>
       <ul>
-        <li><strong>Local only:</strong> files remain inside Headmon, are excluded from automatic device backup and are deleted if the app is deleted.</li>
-        <li><strong>A Files folder:</strong> Headmon writes to the folder you select. Its provider controls storage and any syncing. The Headmon developer cannot browse or receive those files.</li>
+        <li><strong>Local only on iPhone and iPad:</strong> files remain inside Headmon, are excluded from automatic device backup and are deleted if the app is deleted.</li>
+        <li><strong>A folder you select:</strong> Headmon writes to a folder granted through the system picker. Its provider controls storage and any syncing. The Headmon developer cannot browse or receive those files.</li>
       </ul>
       <p>
         iOS decides when background work runs. If a backup is due but iOS has not run it in the
