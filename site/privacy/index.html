@@ -29,7 +29,7 @@
     <header class="page-title">
       <p class="eyebrow">Plain-language policy</p>
       <h1>Privacy at Headmon</h1>
-      <p>Effective 13 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
+      <p>Effective 17 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
     </header>
 
     <article class="document">
@@ -48,7 +48,8 @@
         medicines, triggers, stress levels, notes, photos, weather context, custom catalog
         entries, reminders and app preferences. This information is stored locally in the
         application’s private storage and shared app-group storage needed by Headmon’s own
-        widgets, controls and Live Activities.
+        widgets, controls and Live Activities. Headmon excludes this private diary storage from
+        automatic device and cloud backup on both iOS and Android.
       </p>
       <p>
         Headmon does not transmit this diary information to the developer. Deleting the app
@@ -60,7 +61,7 @@
       <h2>Exports, imports and backups</h2>
       <p>
         Manual complete ZIP backups, calendar JSON backups, CSV and PDF files are created only when you
-        request them. Recurring complete backup is optional and starts only after you enable it. Headmon keeps the two newest automatic backup files. On iOS, you choose whether Headmon keeps them in
+        request them. Recurring complete backup is optional and starts only after you enable it. Headmon keeps the two newest automatic backup files. You choose whether Headmon keeps them in
         its local-only storage or writes them to a folder you explicitly select through the system
         Files interface. The selected folder may be on the device or managed by a provider such as
         iCloud Drive, depending on your choice and system settings. Headmon stores the system-granted
@@ -86,6 +87,11 @@
         photos, captions and continuous weather history. Calendar
         JSON backups do not include photo files or continuous weather history.
       </p>
+      <p>
+        Export and backup files are readable files, not Headmon-encrypted archives. A photo chosen
+        from the photo library may retain metadata already embedded in that file. Protect exports
+        as you would any other private health record, and delete copies you no longer need.
+      </p>
 
       <h2>Your choices and deletion</h2>
       <p>
@@ -105,10 +111,10 @@
         place-search text and diary content are not sent to Open-Meteo.
       </p>
       <p>
-        The privately distributed Android app currently uses Open-Meteo for both manual place
-        search and weather. On Android, a manual search sends the entered place text to
-        Open-Meteo, and a weather request sends the selected location coordinates. Diary content
-        is not included in either request.
+        The Android app uses Open-Meteo for both manual place search and weather. A manual search
+        sends the entered place text to Open-Meteo. Current-location weather uses Android's
+        approximate-location permission; selecting a place or map pin sends that selected
+        location's coordinates. Diary content is not included in either request.
       </p>
       <p>
         Open-Meteo states that its free API may retain server logs containing IP addresses and
@@ -118,8 +124,16 @@
         <a href="https://open-meteo.com/en/terms">Open-Meteo terms and privacy information</a>.
       </p>
       <p>
+        Android's optional map picker displays OpenStreetMap tiles through MapLibre. Opening or
+        moving that map requests the visible tiles from OpenStreetMap over HTTPS. The OpenStreetMap
+        Foundation states that service logs can include an IP address, application and device
+        type, operating system, request time and the tiles requested. Headmon does not send diary
+        content to OpenStreetMap. Read the
+        <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation Privacy Policy</a>.
+      </p>
+      <p>
         Weather is optional. You can disable location access, diary weather, background weather
-        history and pressure alerts in Headmon and iOS Settings. Headmon does not request
+        history and pressure alerts in Headmon and system Settings. Headmon does not request
         background location permission.
       </p>
 
@@ -137,7 +151,9 @@
         Installing through an app store, using TestFlight, opening system maps, selecting files,
         receiving notifications, or using device backup may involve Apple, Google or a selected
         file provider processing information under its own terms. Headmon does not receive their
-        account, purchase or store-analytics data through the app.
+        account, purchase or store-analytics data through the app. Headmon includes no analytics
+        or crash-reporting SDK; app stores and operating systems may still provide platform-level
+        diagnostics or aggregated store information under their own terms.
       </p>
 
       <h2>Website and support</h2>
