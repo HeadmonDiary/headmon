@@ -14,6 +14,7 @@ repository.
 - About: https://headmondiary.com/about/
 - Support: https://headmondiary.com/support/
 - Privacy policy: https://headmondiary.com/privacy/
+- Informational use and medical notice: https://headmondiary.com/medical-notice/
 - Private contact: headmon@proton.me
 - Public bug reports and feature requests: use this repository's Issues tab.
 
@@ -24,6 +25,8 @@ context is unavoidable.
 
 ## Repository scope
 
-The contents are limited to public website and support material. They are not
-the Headmon application source distribution and no open-source license is
-granted by this repository.
+The contents are limited to public website and support material. The static
+`/bv` backup workbench is a compiled public artifact; its editable source is
+maintained separately and remains private. This repository is not the Headmon
+application source distribution and no open-source license is granted by this
+repository.
