@@ -538,6 +538,15 @@ main {
   background: linear-gradient(135deg, rgba(182, 78, 119, 0.12), rgba(20, 125, 112, 0.08));
 }
 
+.release-notes {
+  margin-inline: auto;
+  border-top: 0.3rem solid var(--teal);
+}
+
+.release-notes h2 {
+  margin-top: 0.35rem;
+}
+
 .install-steps {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
