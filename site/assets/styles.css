@@ -547,10 +547,6 @@ main {
   margin-top: 0.35rem;
 }
 
-.verification-release {
-  border-top-color: var(--pink);
-}
-
 .install-steps {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
