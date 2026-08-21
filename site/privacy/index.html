@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Headmon privacy policy: on-device diary storage, optional weather requests, and user-controlled exports and backups.">
   <meta name="theme-color" content="#147d70">
   <title>Privacy policy | Headmon</title>
@@ -30,7 +32,7 @@
     <header class="page-title">
       <p class="eyebrow">Plain-language policy</p>
       <h1>Privacy at Headmon</h1>
-      <p>Effective 17 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
+      <p>Effective 21 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
     </header>
 
     <article class="document">
@@ -40,6 +42,7 @@
         <li>Headmon does not operate a cloud diary or synchronization service.</li>
         <li>Headmon does not include advertising, tracking, third-party analytics or a developer-operated crash-reporting service.</li>
         <li>Diary entries are not sent to the Headmon developer.</li>
+        <li>The browser backup viewer processes selected files in memory and does not upload or persist them in browser storage.</li>
         <li>Optional weather features send approximate coordinates to Open-Meteo. No diary content accompanies those requests.</li>
       </ul>
 
@@ -92,6 +95,17 @@
         Export and backup files are readable files, not Headmon-encrypted archives. A photo chosen
         from the photo library may retain metadata already embedded in that file. Protect exports
         as you would any other private health record, and delete copies you no longer need.
+      </p>
+      <p>
+        The browser-based backup viewer processes a selected backup and edits only in the current
+        tab. Its code does not upload backup content or write it to local storage, IndexedDB, a
+        service worker cache or another persistent website store. Closing or reloading the tab
+        discards the working copy unless you explicitly export a file. When the current viewer
+        loads, it also requests deletion of the IndexedDB draft database used by earlier preview
+        versions. Files you export remain wherever your browser or operating system saves them.
+        Browsers and operating systems can still use their own temporary memory, swap, crash
+        recovery, download history or recent-file records; Headmon does not control those platform
+        mechanisms.
       </p>
 
       <h2>Your choices and deletion</h2>

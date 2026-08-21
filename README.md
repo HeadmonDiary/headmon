@@ -17,6 +17,8 @@ repository.
 - Informational use and medical notice: https://headmondiary.com/medical-notice/
 - Private contact: headmon@proton.me
 - Public bug reports and feature requests: use this repository's Issues tab.
+- Security reports: follow [SECURITY.md](SECURITY.md) and contact the private
+  address rather than opening a public issue.
 
 Never attach a Headmon JSON, CSV or PDF export, medical document, private photo,
 exact location, or other health information to a public GitHub issue. Use
@@ -27,6 +29,10 @@ context is unavoidable.
 
 The contents are limited to public website and support material. The static
 `/bv` backup workbench is a compiled public artifact; its editable source is
-maintained separately and remains private. This repository is not the Headmon
-application source distribution and no open-source license is granted by this
-repository.
+maintained separately and remains private. The workbench processes a selected
+backup in tab memory, does not upload it, does not persist it in browser
+storage, and removes the draft database used by earlier preview versions when
+it loads. This repository is not the Headmon application source distribution.
+No open-source license is granted for Headmon-authored material; bundled
+third-party components remain under the terms listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Headmon is a private, account-free headache and migraine diary for Android and iOS.">
   <meta name="theme-color" content="#147d70">
   <title>Headmon | A private headache diary</title>
@@ -45,7 +47,7 @@
         </div>
         <p class="release-note">Public store releases are in preparation.</p>
       </div>
-      <div class="hero-visual" aria-label="Headmon on iOS">
+      <div class="hero-visual" role="group" aria-label="Headmon on iOS">
         <div class="phone-shell phone-shell-hero">
           <img class="theme-screenshot" src="/assets/screens/ios-today-dark.png" data-dark-src="/assets/screens/ios-today-dark.png" data-light-src="/assets/screens/ios-today-light.png" width="660" height="1434" alt="Headmon Today screen on iOS showing an empty diary day, episode button and week calendar">
         </div>
@@ -122,7 +124,7 @@
         </p>
         <a class="button" href="/in-action/">Explore the screens</a>
       </div>
-      <div class="shot-row" aria-label="Headmon iOS screen previews">
+      <div class="shot-row" role="group" aria-label="Headmon iOS screen previews">
         <figure class="mini-shot">
           <div class="phone-shell">
             <img class="theme-screenshot" src="/assets/screens/ios-medicines-dark.png" data-dark-src="/assets/screens/ios-medicines-dark.png" data-light-src="/assets/screens/ios-medicines-light.png" loading="lazy" width="660" height="1434" alt="Headmon medicine catalog on iOS">
