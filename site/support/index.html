@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="/">
       <img src="/assets/headmon-icon.png" alt="">
@@ -28,7 +29,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <header class="page-title">
       <p class="eyebrow">Independent support</p>
       <h1>Help with Headmon</h1>
@@ -47,6 +48,12 @@
         <strong>Protect your diary:</strong> never attach a Headmon backup, CSV or PDF export,
         medical document, private photo, exact location or other health information to a public
         GitHub issue. Describe the behavior using invented example data instead.
+      </p>
+      <p>
+        An automated privacy-moderation check looks for possible personal or health information in
+        new public issues and comments so the operator can remove it quickly. This is only a safety
+        net. If you accidentally post private information, remove what you can immediately and
+        email <a href="mailto:headmon@proton.me">headmon@proton.me</a> with the issue link.
       </p>
 
       <h2>Before reporting a problem</h2>

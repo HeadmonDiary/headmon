@@ -63,6 +63,9 @@ def main() -> int:
             issues.append(f"missing Content Security Policy: {relative}")
         if '<meta name="referrer" content="no-referrer"' not in text:
             issues.append(f"missing no-referrer policy: {relative}")
+        if document != SITE / "bv" / "index.html":
+            if 'class="skip-link"' not in text or 'id="main-content"' not in text:
+                issues.append(f"missing keyboard skip link or main target: {relative}")
 
         parser = References()
         parser.feed(text)
@@ -89,6 +92,12 @@ def main() -> int:
             issues.append("the backup viewer must not open persistent browser storage")
         if "deleteDatabase" not in viewer:
             issues.append("the backup viewer must remove its legacy draft database")
+        if "window.top" not in viewer or "does not run the backup viewer inside another website" not in viewer:
+            issues.append("the backup viewer must refuse framed operation")
+
+    viewer_html = SITE / "bv" / "index.html"
+    if viewer_html.exists() and "<noscript>" not in viewer_html.read_text(encoding="utf-8"):
+        issues.append("the backup viewer must explain that JavaScript is required")
 
     if issues:
         print("Site validation failed:")

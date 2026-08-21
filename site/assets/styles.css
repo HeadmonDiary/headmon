@@ -64,6 +64,22 @@ a:hover {
   text-decoration-thickness: 0.13em;
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  color: #ffffff;
+  background: #0c5d53;
+  border-radius: 0.5rem;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .site-header,
 .site-footer,
 main {
