@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Download Headmon for Android and follow the safe installation and update instructions.">
+  <meta name="theme-color" content="#147d70">
+  <title>Download Headmon for Android</title>
+  <link rel="icon" href="/assets/headmon-icon.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/assets/headmon-icon.png" alt=""><span>Headmon</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/in-action/">In action</a>
+      <a href="/about/">About</a>
+      <a href="/android/" aria-current="page">Android</a>
+      <a href="/medical-notice/">Medical notice</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/backup/">Backups</a>
+      <a href="/support/">Support</a>
+      <a href="https://github.com/HeadmonDiary/headmon">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <header class="page-title download-title">
+      <p class="eyebrow">Official Android download</p>
+      <h1>Install Headmon directly.</h1>
+      <p>Headmon for Android is distributed by the developer as a signed APK. No Google Play account is needed.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/HeadmonDiary/headmon/releases/download/android-4.0.1/Headmon-4.0.1.apk">Download Headmon 4.0.1</a>
+        <a class="button" href="https://github.com/HeadmonDiary/headmon/releases/tag/android-4.0.1">View release on GitHub</a>
+      </div>
+      <p class="release-note">Android 9 or newer · 46,381,895 bytes · package <code>com.headmondiary.headmon</code></p>
+    </header>
+
+    <section class="section download-warning">
+      <div>
+        <p class="eyebrow">Before installing</p>
+        <h2>Protect your diary first.</h2>
+      </div>
+      <div>
+        <p><strong>If Headmon is already installed, do not uninstall it.</strong> Create a complete backup in a Files folder, then install the new APK over the existing app. Uninstalling removes local diary data and local-only backups.</p>
+        <a class="button" href="/backup/">Open the backup guide</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section-heading">
+        <p class="eyebrow">First installation</p>
+        <h2>Four steps on your Android device.</h2>
+      </header>
+      <ol class="install-steps">
+        <li><strong>Download the APK.</strong><span>Use the button above and open the completed download.</span></li>
+        <li><strong>Allow this source when Android asks.</strong><span>Enable “Allow from this source” for the browser or file app you used. This permission applies to that app, not to Headmon.</span></li>
+        <li><strong>Choose Install.</strong><span>Android may also show a Play Protect notice because the APK came from outside Google Play. Confirm only if the package came from this page or the linked Headmon GitHub release.</span></li>
+        <li><strong>Turn the source permission off again.</strong><span>After installation, return to the browser or file app’s “Install unknown apps” setting and disable it until the next update.</span></li>
+      </ol>
+    </section>
+
+    <section class="section split-panel">
+      <div>
+        <p class="eyebrow">Updating Headmon</p>
+        <h2>Install over the existing app.</h2>
+      </div>
+      <div>
+        <p>Headmon checks this site for version information when the app opens, at most once every 24 hours. You can also use Settings → About Headmon → Check for updates. The check sends no diary content.</p>
+        <p>When an update is available, download it here and install it without uninstalling Headmon. Android accepts the update only when its package name and developer signing key match and its version is newer.</p>
+      </div>
+    </section>
+
+    <section class="section grid" aria-label="Download safety details">
+      <article class="card">
+        <span class="card-mark" aria-hidden="true">✓</span>
+        <h2>Signed releases</h2>
+        <p>Every official APK is signed with Headmon’s Android release key. Android uses that identity to protect updates.</p>
+      </article>
+      <article class="card">
+        <span class="card-mark" aria-hidden="true">#</span>
+        <h2>File verification</h2>
+        <p>SHA-256 for Headmon 4.0.1:</p>
+        <code class="checksum">2d31ec1d3bfee2623522371660245c23dcf1e82c568ee4df735b3d867687d849</code>
+      </article>
+      <article class="card">
+        <span class="card-mark" aria-hidden="true">↗</span>
+        <h2>One canonical source</h2>
+        <p>This page is the installation guide. The APK itself is mirrored by the official Headmon GitHub release linked above.</p>
+      </article>
+    </section>
+
+    <section class="section document troubleshooting">
+      <h2>Troubleshooting</h2>
+      <h3>Android says “App not installed”</h3>
+      <p>Do not uninstall the existing app. Confirm that you downloaded the newest official Headmon APK. A differently signed old build cannot be updated in place; create an external complete backup before changing installations.</p>
+      <h3>The Install button is unavailable</h3>
+      <p>Open Settings → Apps → Special app access → Install unknown apps, choose the browser or file app holding the APK, and temporarily allow that source. Menu names vary by device.</p>
+      <h3>Play Protect shows a warning</h3>
+      <p>Directly distributed apps can receive an extra warning. Check that the address is <strong>headmondiary.com</strong> or the official <strong>HeadmonDiary/headmon</strong> GitHub release before continuing.</p>
+      <p>Still stuck? Read <a href="/support/">support and reporting guidance</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 Headmon</span><a href="/privacy/">Privacy</a></footer>
+</body>
+</html>

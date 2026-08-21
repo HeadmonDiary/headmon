@@ -21,6 +21,7 @@
     <nav aria-label="Primary navigation">
       <a href="/in-action/">In action</a>
       <a href="/about/">About</a>
+      <a href="/android/">Android</a>
       <a href="/medical-notice/">Medical notice</a>
       <a href="/privacy/" aria-current="page">Privacy</a>
       <a href="/backup/">Backups</a>
@@ -33,7 +34,7 @@
     <header class="page-title">
       <p class="eyebrow">Plain-language policy</p>
       <h1>Privacy at Headmon</h1>
-      <p>Effective 21 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
+      <p>Effective 22 August 2026. Headmon is designed around a simple boundary: your headache diary belongs under your control.</p>
     </header>
 
     <article class="document">
@@ -45,6 +46,7 @@
         <li>Diary entries are not sent to the Headmon developer.</li>
         <li>The browser backup viewer processes selected files in memory and does not upload or persist them in browser storage.</li>
         <li>Optional weather features send approximate coordinates to Open-Meteo. No diary content accompanies those requests.</li>
+        <li>The Android app requests a small version file from this website at most once every 24 hours while it is opened. No diary content or device identifier is added to the request.</li>
       </ul>
 
       <h2>Information stored on your device</h2>
@@ -170,6 +172,24 @@
         account, purchase or store-analytics data through the app. Headmon includes no analytics
         or crash-reporting SDK; app stores and operating systems may still provide platform-level
         diagnostics or aggregated store information under their own terms.
+      </p>
+
+      <h2>Android update checks and direct downloads</h2>
+      <p>
+        When the Android app is opened after onboarding, it can request a fixed update manifest
+        from <code>headmondiary.com</code> at most once every 24 hours. A manual check under
+        Settings → About Headmon can make the same request sooner. The request contains no diary
+        entry, symptom, medicine, trigger, note, location, advertising identifier or account
+        information. It uses a generic Headmon update-check user agent rather than a unique device
+        identifier.
+      </p>
+      <p>
+        The manifest contains only public release information. If you choose to download an APK,
+        your browser connects to the official Headmon GitHub release. GitHub Pages and GitHub
+        Releases can process ordinary request information such as an IP address, request time,
+        browser or app user agent and requested file under GitHub’s privacy terms. Headmon does
+        not receive a copy of your diary through either request. See the
+        <a href="/android/">Android download and update guide</a>.
       </p>
 
       <h2>Website and support</h2>

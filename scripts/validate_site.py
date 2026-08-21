@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -21,6 +22,7 @@ FORBIDDEN_SUFFIXES = {
     ".sqlite3",
     ".zip",
 }
+PUBLIC_JSON_FILES = {Path("android/update.json")}
 
 
 class References(HTMLParser):
@@ -53,7 +55,11 @@ def main() -> int:
 
     for path in files:
         relative = path.relative_to(ROOT)
-        if path.suffix.lower() in FORBIDDEN_SUFFIXES:
+        site_relative = path.relative_to(SITE)
+        if (
+            path.suffix.lower() in FORBIDDEN_SUFFIXES
+            and site_relative not in PUBLIC_JSON_FILES
+        ):
             issues.append(f"sensitive export type must not be published: {relative}")
         if path.name.endswith(".map"):
             issues.append(f"source map must not be published: {relative}")
@@ -84,6 +90,35 @@ def main() -> int:
                 target /= "index.html"
             if not target.exists():
                 issues.append(f"broken local reference in {relative}: {reference}")
+
+    update_manifest = SITE / "android" / "update.json"
+    if update_manifest.exists():
+        try:
+            update = json.loads(update_manifest.read_text(encoding="utf-8"))
+            expected_keys = {
+                "schemaVersion", "packageName", "versionCode", "versionName",
+                "publishedAt", "releaseNotes", "releasePageUrl", "downloadUrl",
+                "sha256",
+            }
+            if set(update) != expected_keys:
+                issues.append("Android update manifest has unexpected or missing keys")
+            if update.get("schemaVersion") != 1:
+                issues.append("Android update manifest schemaVersion must be 1")
+            if update.get("packageName") != "com.headmondiary.headmon":
+                issues.append("Android update manifest has the wrong package name")
+            if not isinstance(update.get("versionCode"), int) or update.get("versionCode", 0) <= 0:
+                issues.append("Android update manifest has an invalid versionCode")
+            for key in ("releasePageUrl", "downloadUrl"):
+                if not str(update.get(key, "")).startswith("https://"):
+                    issues.append(f"Android update manifest {key} must use HTTPS")
+            if not re.fullmatch(r"[0-9a-f]{64}", str(update.get("sha256", ""))):
+                issues.append("Android update manifest has an invalid SHA-256")
+            if update.get("sha256") == "0" * 64:
+                issues.append("Android update manifest still has a placeholder SHA-256")
+        except (OSError, json.JSONDecodeError):
+            issues.append("Android update manifest is not valid JSON")
+    else:
+        issues.append("missing Android update manifest")
 
     viewer_scripts = list((SITE / "bv" / "assets").glob("*.js"))
     viewer_styles = list((SITE / "bv" / "assets").glob("*.css"))
