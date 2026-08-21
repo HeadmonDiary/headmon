@@ -1,0 +1,23 @@
+Headmon Backup Viewer corresponding source
+
+Source repository:
+https://github.com/HeadmonDiary/headmon-backup-viewer
+
+Source revision:
+d9f5b2beb58842e8ebbf2d3398d4964343e2db8e
+
+License:
+GNU General Public License version 3; see LICENSE.txt in this directory.
+
+Reproduce the static build from a clean checkout with Node.js 22.13.0 or newer:
+
+  npm ci
+  npm run check
+
+The deployed build was created by npm run build:static. SHA-256 hashes of its
+generated files are:
+
+9b84c05e4743298ed34890b2108475c19b02eee491a0545be19def80138db59a  assets/index-C726j0pr.css
+31e77100369b64c998839695b4da729ddb255311c20aa9ae357af3f18bb4d9e4  assets/index-DF_oQTM0.js
+b23181b7d77551b6088be042fc10f7d1dc493f93ccc7e262cd6ceeb9ffc2662f  headmon-icon.png
+c74cdd9f8b1af58a17e6b785b063775b82cd51ae4072211f8af135282380e980  index.html

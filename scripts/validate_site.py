@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import hashlib
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -84,6 +86,7 @@ def main() -> int:
                 issues.append(f"broken local reference in {relative}: {reference}")
 
     viewer_scripts = list((SITE / "bv" / "assets").glob("*.js"))
+    viewer_styles = list((SITE / "bv" / "assets").glob("*.css"))
     if len(viewer_scripts) != 1:
         issues.append("the backup viewer must have exactly one JavaScript bundle")
     else:
@@ -94,10 +97,34 @@ def main() -> int:
             issues.append("the backup viewer must remove its legacy draft database")
         if "window.top" not in viewer or "does not run the backup viewer inside another website" not in viewer:
             issues.append("the backup viewer must refuse framed operation")
+    if len(viewer_styles) != 1:
+        issues.append("the backup viewer must have exactly one CSS bundle")
 
     viewer_html = SITE / "bv" / "index.html"
     if viewer_html.exists() and "<noscript>" not in viewer_html.read_text(encoding="utf-8"):
         issues.append("the backup viewer must explain that JavaScript is required")
+
+    viewer_source = SITE / "bv" / "SOURCE.txt"
+    viewer_license = SITE / "bv" / "LICENSE.txt"
+    viewer_notices = SITE / "bv" / "THIRD_PARTY_NOTICES.txt"
+    for required_file in (viewer_source, viewer_license, viewer_notices):
+        if not required_file.exists():
+            issues.append(f"missing backup viewer distribution file: {required_file.relative_to(ROOT)}")
+
+    if viewer_source.exists():
+        source_text = viewer_source.read_text(encoding="utf-8")
+        if "https://github.com/HeadmonDiary/headmon-backup-viewer" not in source_text:
+            issues.append("the backup viewer must link to its corresponding source")
+        if not re.search(r"Source revision:\s+[0-9a-f]{40}\b", source_text):
+            issues.append("the backup viewer must record an exact source revision")
+        built_files = [viewer_html, SITE / "bv" / "headmon-icon.png", *viewer_scripts, *viewer_styles]
+        for built_file in built_files:
+            if not built_file.exists():
+                continue
+            digest = hashlib.sha256(built_file.read_bytes()).hexdigest()
+            relative = built_file.relative_to(SITE / "bv").as_posix()
+            if f"{digest}  {relative}" not in source_text:
+                issues.append(f"stale or missing viewer build hash: {relative}")
 
     if issues:
         print("Site validation failed:")

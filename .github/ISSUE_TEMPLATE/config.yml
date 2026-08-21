@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Private support by email
+  - name: Non-sensitive support by email
     url: https://headmondiary.com/support/
-    about: Use private email for anything involving personal diary or health information.
+    about: Use email only for project questions that contain no personal or health information.
   - name: Privacy policy
     url: https://headmondiary.com/privacy/
     about: Learn what Headmon stores locally and what optional weather requests send.
