@@ -1,0 +1,22 @@
+name: Project question
+description: Ask a non-sensitive question about Headmon or its documentation.
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub Issues are public. Do not include real diary entries, health information, exports, private photos, exact locations or other personal information. Use invented examples when needed.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask the question without including personal or health information.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This question contains no real diary, health, photo, location or other personal data.
+          required: true

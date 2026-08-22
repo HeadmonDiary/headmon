@@ -15,12 +15,12 @@ repository.
 - Support: https://headmondiary.com/support/
 - Privacy policy: https://headmondiary.com/privacy/
 - Informational use and medical notice: https://headmondiary.com/medical-notice/
-- Support email for non-sensitive questions: headmon@proton.me
-- Public bug reports and feature requests: use this repository's Issues tab.
-- Security reports: follow [SECURITY.md](SECURITY.md) and email only invented,
-  non-sensitive reproduction details rather than opening a public issue.
+- Project questions, bug reports and feature requests: use this repository's
+  Issues tab and include only invented, non-sensitive example data.
+- Security reports: follow [SECURITY.md](SECURITY.md) and use GitHub's private
+  vulnerability reporting rather than opening a public issue.
 
-Never attach or email a Headmon JSON, CSV or PDF export, medical document,
+Never attach or post a Headmon JSON, CSV or PDF export, medical document,
 private photo, exact location, or other health information. Use invented
 example data. If a report cannot be made without personal information, do not
 submit it.

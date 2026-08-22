@@ -23,7 +23,6 @@
       <a href="/privacy/">Privacy</a>
       <a href="/backup/">Backups</a>
       <a href="/support/">Support</a>
-      <a href="https://github.com/HeadmonDiary/headmon">GitHub</a>
     </nav>
   </header>
 
@@ -111,18 +110,34 @@
       </article>
     </section>
 
-    <section class="section document troubleshooting">
-      <h2>Troubleshooting</h2>
-      <h3>Android says “App not installed”</h3>
-      <p>Do not uninstall the existing app. Confirm that you downloaded the newest official Headmon APK. A differently signed old build cannot be updated in place; create an external complete backup before changing installations.</p>
-      <h3>The Install button is unavailable</h3>
-      <p>Open Settings → Apps → Special app access → Install unknown apps, choose the browser or file app holding the APK, and temporarily allow that source. Menu names vary by device.</p>
-      <h3>Play Protect shows a warning</h3>
-      <p>Directly distributed apps can receive an extra warning. Check that the address is <strong>headmondiary.com</strong> or the official <strong>HeadmonDiary/headmon</strong> GitHub release before continuing.</p>
-      <p>Still stuck? Read <a href="/support/">support and reporting guidance</a>.</p>
+    <section class="section android-info-grid" aria-label="Android installation information">
+      <article class="document troubleshooting">
+        <h2>Troubleshooting</h2>
+        <h3>Android says “App not installed”</h3>
+        <p>Do not uninstall the existing app. Confirm that you downloaded the newest official Headmon APK. A differently signed old build cannot be updated in place; create an external complete backup before changing installations.</p>
+        <h3>The Install button is unavailable</h3>
+        <p>Open Settings → Apps → Special app access → Install unknown apps, choose the browser or file app holding the APK, and temporarily allow that source. Menu names vary by device.</p>
+        <h3>Play Protect shows a warning</h3>
+        <p>Directly distributed apps can receive an extra warning. Check that the address is <strong>headmondiary.com</strong> or the official <strong>HeadmonDiary/headmon</strong> GitHub release before continuing.</p>
+        <p>Still stuck? Read <a href="/support/">support and reporting guidance</a>.</p>
+      </article>
+      <article class="document play-store-note">
+        <h2>Why not Google Play?</h2>
+        <p>
+          Google requires health apps to be published through an organization account. Creating
+          that account requires organization details and business verification, including a
+          D-U-N-S number.
+        </p>
+        <p>
+          Headmon is an independent personal project, and we chose not to create an organization
+          solely for store distribution. The Android app is therefore signed and released directly
+          through this website and the official GitHub repository.
+        </p>
+        <p><a href="https://support.google.com/googleplay/android-developer/answer/13634885">Read Google’s developer account policy</a>.</p>
+      </article>
     </section>
   </main>
 
-  <footer class="site-footer"><span>© 2026 Headmon</span><a href="/privacy/">Privacy</a></footer>
+  <footer class="site-footer"><span>© 2026 Headmon</span><a href="/privacy/">Privacy</a><a href="https://github.com/HeadmonDiary/headmon">GitHub</a></footer>
 </body>
 </html>

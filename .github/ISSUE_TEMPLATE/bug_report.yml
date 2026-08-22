@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for helping improve Headmon.
 
-        **Do not attach or email Headmon JSON, CSV or PDF exports, medical documents, private photos, exact locations or other health information.** GitHub Issues are public. Use invented example data. If the report cannot be made without personal information, do not submit it.
+        **Do not attach Headmon JSON, CSV or PDF exports, medical documents, private photos, exact locations or other health information.** GitHub Issues are public. Use invented example data. If the report cannot be made without personal information, do not submit it.
   - type: input
     id: version
     attributes:
